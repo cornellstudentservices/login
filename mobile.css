@@ -5,30 +5,30 @@
 
 @font-face {
   font-family: 'product';
-  src: url("./googlesans-regular.ttf") format("truetype");
+  src: url("./GoogleSans-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: 'productsans';
-  src: url("./product sans bold.ttf") format("truetype");
+  src: url("./Product Sans Bold.ttf") format("truetype");
   font-weight: bold;
 }
 
 @font-face {
   font-family: 'productsans';
-  src: url("./product sans regular.ttf") format("truetype");
+  src: url("./Product Sans Regular.ttf") format("truetype");
   font-weight: normal;
 }
 
 @font-face {
   font-family: 'noto';
-  src: url("./notosans-regular.ttf") format("truetype");
+  src: url("./NotoSans-Regular.ttf") format("truetype");
   font-weight: normal;
 }
 
 @font-face {
   font-family: 'noto';
-  src: url("./notosans-bold.ttf") format("truetype");
+  src: url("./NotoSans-Bold.ttf") format("truetype");
   font-weight: bold;
 }
 
