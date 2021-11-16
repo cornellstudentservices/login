@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href = 'style.css' rel = 'stylesheet'>
+    <link href = 'mobile.css' rel = 'stylesheet'>
+</head>
+<body>
+
+
+  <canvas id = 'bar'>
+  </canvas>
+    <div class = 'card' id = 'first'>
+
+        <div class = 'head'>
+          <img class = 'logo' src = 'google.png' alt = 'logo'>
+            <h1> Sign in </h1>
+            <p> to continue to Gmail </p>
+        </div>
+
+            <div class="group">
+                <input id = 'email' pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"  type="email" required>
+                <div class = 'message' id = 'message'>
+                  <img src = 'w-74.png' alt = 'image'>
+                  <h3> Wrong password. Try again or click Forgot Password to reset it.</h3>
+                </div>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label id = 'label'>Email or phone </label>
+                <a href = '#'><p> Forgot email? </p></a>
+              </div>
+
+
+            <p class = 'blurb'>
+                Not your computer? Use guest mode to sign in privately. <br>
+                <a href = '#'> Learn More </a>
+            </p>
+
+            <div class = 'row'>
+              <a> <p> Create Account </p></a>
+              <button id = 'next'> Next </button>
+            </div>
+    </div>
+
+
+    <div class = 'card' id = 'second'>
+
+      <div class = 'head'>
+        <img class = 'logo' src = 'google.png' alt = 'logo'>
+          <h1> Welcome </h1>
+          <div id = 'profile'>
+            <img class = 'profile' src = 'profile.png' alt = 'image'>
+            <p id = 'address'> loremipsum@gmail.com </p>
+            <img class = 'arrow' src = 'arrow.png' alt = 'image'>
+          </div>
+      </div>
+
+          <div class="group">
+              <input id = 'password' type="password" required autocomplete="false" readonly onfocus="this.removeAttribute('readonly');">
+              <div class = 'message' id = 'message2'>
+                <h3> Wrong password. Try again or click Forgot Password to reset it.</h3>
+              </div>
+              <span class="highlight"></span>
+              <span class="bar"></span>
+              <label id = 'label2'> Enter your password </label>
+              <a href = '#'>
+                <div class = 'check'>
+                  <!--
+                  <input id = 'checkbox' type = 'checkbox'>
+                  -->
+                  <div id = 'checkbox'>
+                    <img src = 'check.png' alt = 'image'>
+                  </div>
+                  <p> Show Password </p>
+                </div>
+              </a>
+            </div>
+
+          <div class = 'row'>
+            <a> <p> Forgot password? </p></a>
+            <button id = 'submit'> Next </button>
+          </div>
+  </div>
+
+
+
+    <img class = 'ref' src = 'screenshot.png'>
+
+</body>
+<script src = 'functions.js'></script>
+<script src = 'script.js'></script>
+</html>
